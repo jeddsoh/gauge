@@ -1,9 +1,18 @@
 import './globals.css'
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
-import {Providers} from "./providers";
+import { IBM_Plex_Serif } from 'next/font/google'
+import { IBM_Plex_Sans } from 'next/font/google'
+import {Providers} from "./providers"
 
-const inter = Inter({ subsets: ['latin'] })
+const sans = IBM_Plex_Sans({
+  weight: ['400', '500', '600', '700'],
+  subsets: ['latin'],
+})
+
+const serif = IBM_Plex_Serif({
+  weight: ['400', '500', '600', '700'],
+  subsets: ['latin'],
+})
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -17,7 +26,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className='dark'>
-      <body className={inter.className}>
+      <body className={sans.className}>
         <Providers>
           {children}
         </Providers>
