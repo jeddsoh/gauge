@@ -1,18 +1,7 @@
 import './globals.css'
 import type { Metadata } from 'next'
-import { IBM_Plex_Serif } from 'next/font/google'
-import { IBM_Plex_Sans } from 'next/font/google'
+import { sans, serif } from './fonts'
 import {Providers} from "./providers"
-
-const sans = IBM_Plex_Sans({
-  weight: ['400', '500', '600', '700'],
-  subsets: ['latin'],
-})
-
-const serif = IBM_Plex_Serif({
-  weight: ['400', '500', '600', '700'],
-  subsets: ['latin'],
-})
 
 export const metadata: Metadata = {
   title: 'Create Next App',
