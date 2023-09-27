@@ -9,8 +9,8 @@ import {Spacer} from "@nextui-org/spacer";
 
 export default function Hero() {
   return (
-    <section className="py-16">
-      <div className="container mx-auto">
+    <section id="hero">
+      <div className="container mx-auto py-16">
         <div className="text-center">
           <h1 className={`${serif.className} text-7xl font-bold`}>
             Crafting a new common sense.
