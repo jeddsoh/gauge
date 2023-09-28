@@ -3,6 +3,7 @@ import Hero from "../components/hero";
 import Menu from "../components/menu";
 import Services from "@/components/services-home";
 import DataProjects from "@/components/data";
+import Industries from "@/components/industries";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
           <Hero />
           <Services />
           <DataProjects />
+          <Industries />
         </div>
       </main>
     </>

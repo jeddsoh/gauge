@@ -7,7 +7,7 @@ import NextJSLink from "next/link";
 export default function Hero() {
   return (
     <section id="hero">
-      <div className="container mx-auto py-16">
+      <div className="max-w-screen-xl mx-auto py-16">
         <div className="text-center">
           <h1 className={`${serif.className} text-7xl font-bold`}>
             Crafting a new common sense.
@@ -26,7 +26,7 @@ export default function Hero() {
           <h2 className="mx-auto text-center font-bold">
             Trusted by the clients we keep.
           </h2>
-          <div className="flex flex-col md:grid grid-cols-2 gap-y-12 lg:flex lg:flex-row items-center justify-between mt-10 text-foreground mx-auto">
+          <div className="flex flex-col md:grid grid-cols-2 gap-y-12 lg:flex lg:flex-row items-center justify-between mt-10 text-foreground mx-auto max-w-screen-lg">
             <NextJSLink href="https://affirm.com" target="_blank" className="flex items-center justify-center">
               <svg
                 width="116"

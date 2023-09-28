@@ -96,7 +96,7 @@ export default function Services() {
 
   return (
     <section id="services">
-      <div className="max-w- mx-auto py-32">
+      <div className="mx-auto max-w-screen-xl py-32">
         <h2 className={`${serif.className} font-bold text-2xl text-center`}>
           Data-driven strategies and design excellence.
         </h2>

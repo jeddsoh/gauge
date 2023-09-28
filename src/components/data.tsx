@@ -7,7 +7,7 @@ import { Cognitive, Hearing } from "@carbon/icons-react";
 export default function DataProjects() {
   return (
     <section id="data-projects">
-      <div className="container mx-auto py-16">
+      <div className="max-w-screen-xl mx-auto py-16">
         
           <h2 className={`${serif.className} text-center text-2xl font-bold w-full`}>
             Gauge does more with data.
