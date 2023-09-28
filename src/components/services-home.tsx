@@ -17,7 +17,9 @@ export default function Services() {
       name: "Market and Experience Research",
       description: "Discover the heartbeat of your audience.",
       icon: <Events size="24" className="text-fuchsia-500" />,
-      color: "fuchsia-500",
+      hoverColor: "hover:text-fuchsia-500",
+      borderColor: "border-fuchsia-500",
+
       serviceItems: [
         "Specialty Recruitment",
         "Applied Ethnography",
@@ -30,7 +32,8 @@ export default function Services() {
       name: "Data Analytics and Strategy",
       description: "Empower your decisions with data.",
       icon: <IncreaseLevel size="24" className="text-red-500" />,
-      color: "red-500",
+      hoverColor: "hover:text-red-500",
+      borderColor: "border-red-500",
 
       serviceItems: [
         "Experience Mapping",
@@ -44,7 +47,8 @@ export default function Services() {
       name: "Product and Systems Design",
       description: "Deliver seamless digital experiences to your users.",
       icon: <PenFountain size="24" className="text-cyan-500" />,
-      color: "cyan-500",
+      hoverColor: "hover:text-cyan-500",
+      borderColor: "border-cyan-500",
 
       serviceItems: [
         "Heuristic UX Assessment",
@@ -61,10 +65,10 @@ export default function Services() {
         key={service.id}
         fullWidth
         isPressable
-        className={`border-l-2 border-${service.color} rounded-md`}
+        className={`border-l-2 ${service.borderColor} rounded-md`}
       >
-        <CardBody className="p-8">
-          <div className="flex justify-between items-center">
+        <CardBody className="p-12">
+          <div className="flex flex-col lg:flex-row justify-between lg:items-center">
             <div className="flex flex-col gap-4">
               {service.icon}
               <h3 className={`${serif.className} font-bold text-xl`}>
@@ -72,10 +76,11 @@ export default function Services() {
               </h3>
               <p>{service.description}</p>
             </div>
-            <ul className="flex flex-col gap-4 text-right">
+            <ul className="flex flex-col gap-6 mt-8 lg:mt-0">
               {service.serviceItems.map((item) => (
-                <li key={`${service.id}-${item}`} className={`hover:text-${service.color}`}>
+                <li key={`${service.id}-${item}`} className={`${service.hoverColor} transition flex items-center lg:justify-end gap-2 group whitespace-nowrap`}>
                     {item}
+                    <ArrowUpRight size="16" className="group-hover:-translate-y-1 transition"/>
                 </li>
               ))}
             </ul>
