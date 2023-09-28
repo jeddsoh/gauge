@@ -3,9 +3,6 @@ import { Button } from "@nextui-org/button";
 import { serif } from "../app/fonts";
 import { Link } from "@nextui-org/link";
 import NextJSLink from "next/link";
-import adobe from "public/images/clients/Adobe.svg";
-import affirm from "public/images/clients/Affirm.svg";
-import {Spacer} from "@nextui-org/spacer";
 
 export default function Hero() {
   return (

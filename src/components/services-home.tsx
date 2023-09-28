@@ -60,40 +60,45 @@ export default function Services() {
   ];
 
   const serviceListItems = services.map((service) => (
-    
-      <Card
-        key={service.id}
-        fullWidth
-        isPressable
-        className={`border-l-2 ${service.borderColor} rounded-md`}
-      >
-        <CardBody className="p-12">
-          <div className="flex flex-col lg:flex-row justify-between lg:items-center">
-            <div className="flex flex-col gap-4">
-              {service.icon}
-              <h3 className={`${serif.className} font-bold text-xl`}>
-                {service.name}
-              </h3>
-              <p>{service.description}</p>
-            </div>
-            <ul className="flex flex-col gap-6 mt-8 lg:mt-0">
-              {service.serviceItems.map((item) => (
-                <li key={`${service.id}-${item}`} className={`${service.hoverColor} transition flex items-center lg:justify-end gap-2 group whitespace-nowrap`}>
-                    {item}
-                    <ArrowUpRight size="16" className="group-hover:-translate-y-1 transition"/>
-                </li>
-              ))}
-            </ul>
+    <Card
+      key={service.id}
+      fullWidth
+      isPressable
+      className={`border-l-2 ${service.borderColor} radius-xs`}
+    >
+      <CardBody className="p-12">
+        <div className="flex flex-col lg:flex-row justify-between lg:items-center">
+          <div>
+            {service.icon}
+            <h3 className={`${serif.className} font-bold text-xl mt-8`}>
+              {service.name}
+            </h3>
+            <p className="mt-4">{service.description}</p>
           </div>
-        </CardBody>
-      </Card>
+          <ul className="flex flex-col gap-6 mt-8 lg:mt-0">
+            {service.serviceItems.map((item) => (
+              <li
+                key={`${service.id}-${item}`}
+                className={`${service.hoverColor} transition flex items-center lg:justify-end gap-2 group whitespace-nowrap`}
+              >
+                {item}
+                <ArrowUpRight
+                  size="16"
+                  className="group-hover:-translate-y-1 transition"
+                />
+              </li>
+            ))}
+          </ul>
+        </div>
+      </CardBody>
+    </Card>
   ));
 
   return (
     <section id="services">
-      <div className="container mx-auto py-32">
+      <div className="max-w- mx-auto py-32">
         <h2 className={`${serif.className} font-bold text-2xl text-center`}>
-          Data-Driven Strategies and Design Excellence
+          Data-driven strategies and design excellence.
         </h2>
         <div className="flex flex-col gap-12 mt-10 justify-between w-full">
           {serviceListItems}
@@ -102,3 +107,7 @@ export default function Services() {
     </section>
   );
 }
+
+
+
+

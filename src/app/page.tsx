@@ -2,6 +2,7 @@ import { Button } from "@nextui-org/button";
 import Hero from "../components/hero";
 import Menu from "../components/menu";
 import Services from "@/components/services-home";
+import DataProjects from "@/components/data";
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
         <div>
           <Hero />
           <Services />
+          <DataProjects />
         </div>
       </main>
     </>
