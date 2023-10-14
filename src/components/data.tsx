@@ -43,4 +43,5 @@ export default function DataProjects() {
       </div>
     </section>
   );
+
 }
